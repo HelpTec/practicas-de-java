@@ -1,0 +1,26 @@
+package com.mycompany.practicadejava;
+
+import java.util.*;
+/**
+ *
+ * @author Admin
+ */
+public class Practicadejava {
+    public static void main(String[] args) {
+        int dni[] = new int[3];
+        String nombre[] = new String[3];
+        String apellido[] = new String[3];
+        dni[0]= 0000001;
+        dni[1]= 0000002;
+        dni[2]= 0000003;
+        nombre[0]= "Nombregenerico1";
+        nombre[1]= "Nombregenerico2";
+        nombre[2]= "Nombregenerico3";
+        apellido[0]="Apellidogenerico1";
+        apellido[1]="Apellidogenerico2";
+        apellido[2]="Apellidogenerico3";
+        for(int a=0;a<dni.length;a++){
+            System.out.println("El dni "+ dni[a]+" con nombre "+nombre[a]+" y apellido "+apellido[a]);
+        }     
+    }
+}
