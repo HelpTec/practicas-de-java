@@ -1,0 +1,25 @@
+import java.util.*;
+/**
+ *
+ * @author Admin
+ */
+public class Practicadejava {
+    public static void main(String[] args) {
+        int vector[] = new int[10];
+        Scanner teclado = new Scanner(System.in);
+        for(int a=0;a<10;a++){
+            System.out.println("Ingrese numero para posición "+(a+1));
+            int tecla = teclado.nextInt();
+            if (tecla>=0 && tecla<=100){
+                vector[a]=tecla;
+            }
+            else{
+                System.out.println("Solo numeros entre 1 y 100");
+                a--;
+            }
+        }
+        for(int a=0;a<10;a++){
+            System.out.println("En la posición "+(a+1)+" está el numero "+vector[a]);
+        }
+        }
+    }
