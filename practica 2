@@ -1,0 +1,31 @@
+package com.mycompany.practicadejava;
+
+import java.util.*;
+/**
+ *
+ * @author Admin
+ */
+public class Practicadejava {
+    public static void main(String[] args) {
+        int vector[] = new int[15];
+        Scanner teclado = new Scanner(System.in);
+        int edadmax= 0;
+        int edadmin= 0;
+        for(int a=0;a<vector.length;a++){
+            System.out.println("Ingrese edad para posición "+(a+1));
+            int tecla = teclado.nextInt();
+            vector[a]=tecla;
+            if (edadmax<tecla){
+                edadmax=tecla;
+            }
+            if (edadmin==0){
+                edadmin=tecla;
+            }
+            if (edadmin>tecla){
+                edadmin=tecla;
+            }        
+        }
+        System.out.println("La mayor edad es "+(edadmax)+" mientras que la menor edad es "+(edadmin));
+        }
+    }
+
