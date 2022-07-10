@@ -1,0 +1,35 @@
+package com.mycompany.practicadejava;
+
+import java.util.*;
+
+public class Practicadejava {
+    public static void main(String[] args) {
+       String f20x5[][] = new String[20][5];
+       Scanner teclado = new Scanner(System.in);
+       boolean salir = true;
+       
+       for (int f=0; f<20;f++){
+           System.out.println("Ingrese nombre del plato: ");
+           String plato = teclado.next();
+           f20x5[f][0]=plato;
+           for(int c=1;c<5;c++){
+               System.out.println("Ingrese nombre de acompañamientos: ");
+               String guarnicion = teclado.next();
+               f20x5[f][c]=guarnicion;               
+           }
+        }
+       while(salir){
+           System.out.println("Elige una opcion: ");
+           String opcion = teclado.next();
+           if(opcion.equals("salir")){
+                   salir=false;
+           }
+           for(int f=0;f<20;f++){
+               if(f20x5[f][0].equals(opcion)){
+               System.out.println("El plato "+f20x5[f][0]+" puede ir con "+f20x5[f][1]+",  "+f20x5[f][2]+",  "+f20x5[f][3]+" o "+f20x5[f][4]);
+               }
+           }
+       }
+       
+    }
+}
