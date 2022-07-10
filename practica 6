@@ -1,0 +1,24 @@
+package com.mycompany.practicadejava;
+
+import java.util.*;
+
+public class Practicadejava {
+    public static void main(String[] args) {
+       int f4x4[][] = new int[4][4];
+       int ceros= 0;
+       for (int f=0; f<4;f++){
+           for(int c=0;c<4;c++){
+               if(f==ceros && c==ceros){
+                f4x4[f][c]=0;   
+               }
+               else{
+                   f4x4[f][c]=1;
+               }
+           }
+           ceros++;
+       }
+       for (int f=0; f<4;f++){
+           System.out.println(f4x4[f][0]+""+f4x4[f][1]+""+f4x4[f][2]+""+f4x4[f][3]);
+        }
+    }
+}
