@@ -1,0 +1,22 @@
+package com.mycompany.practicadejava;
+
+import java.util.*;
+
+public class Practicadejava {
+    public static void main(String[] args) {
+       int an10x4[][] = new int[10][4];
+       Scanner teclado = new Scanner(System.in);
+       int filas= 0;
+       for (int f=0; f<10;f++){
+           for(int c=0;c<3;c++){
+               System.out.println("Ingrese puntaje para estudiante "+(f+1)+" nota "+(c+1));
+               int tecla = teclado.nextInt();
+               an10x4[f][c]=tecla;
+           }
+           an10x4[f][3]=(an10x4[f][0]+an10x4[f][1]+an10x4[f][2])/3;           
+        }
+       for (int f=0;f<10;f++){
+           System.out.println("Las notas del alumno "+(f+1)+" son "+an10x4[f][0]+" "+an10x4[f][1]+" "+an10x4[f][2]+" y su promedio es "+an10x4[f][3]);
+       }
+    }
+}
