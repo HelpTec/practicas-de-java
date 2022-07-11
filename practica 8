@@ -1,0 +1,41 @@
+public class Practicadejava {
+    public static void main(String[] args) {
+        //*creo los objetos
+        Mascota mascota1= new Mascota("Limon","perro","macho","blanco","rulado","caniche");
+        Mascota mascota2= new Mascota("Luli","perro","hembra","blanco","rulado","caniche");
+        Mascota mascota3= new Mascota("Suri","gato","macho","gris","fino","sin raza");
+        Mascota mascota4= new Mascota("Catalina","gato","hembra","gris","fino","sin raza");
+        Mascota mascota5= new Mascota("Martita","cucaracha","hembra","marron","no tiene","blatella germanica");
+        //*agrego las mascotas a la lista
+        List <Mascota> arraymascota = new ArrayList<Mascota>();
+        arraymascota.add(mascota1);
+        arraymascota.add(mascota2);
+        arraymascota.add(mascota3);
+        arraymascota.add(mascota4);
+        arraymascota.add(mascota5);
+        //*recorro la lista pidiendo nombre, especie y pelaje
+        for(Mascota bicho:arraymascota){
+                  System.out.println("Nombre: "+bicho.getNombre());
+                  System.out.println("Especie: "+bicho.getEspecie());
+                  System.out.println("Pelaje: "+bicho.getPelaje());
+                }
+        //*cambio dos nombres
+        mascota1.setNombre("Chicho");
+        mascota3.setNombre("Vladimir");
+        //*recorro la lista
+        for(Mascota bicho:arraymascota){
+                  System.out.println("Nombre: "+bicho.getNombre());
+                  System.out.println("Especie: "+bicho.getEspecie());
+                  System.out.println("Pelaje: "+bicho.getPelaje());
+                }
+        //*añado dos mascotas mas
+        arraymascota.add(new Mascota("Tincho","carpincho","macho","beige","fino","cartincho"));
+        arraymascota.add(new Mascota("Toto","perro","macho","beige","fino","pug"));
+        //*recorro la lista otra ves pero solo mostrando los perros
+        for(Mascota bicho:arraymascota){
+            if(bicho.getEspecie().equals("perro")){
+                System.out.println(bicho.getNombre());
+            }
+        }              
+    }
+}
