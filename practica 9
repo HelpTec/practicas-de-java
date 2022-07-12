@@ -1,0 +1,74 @@
+package com.mycompany.practicadejava;
+
+import java.util.*;
+
+public class Practicadejava {
+    public static void main(String[] args) {
+        //*creo los objetos
+        Persona persona1=new Persona(20000001, "Alberto", "Gonzales", "Calle1 01", 1100000001, 01);
+        Persona persona2=new Persona(20000002, "Maria", "Perez", "Calle1 02", 1100000002, 02);
+        Persona persona3=new Persona(20000003, "Silvana", "Salas", "Calle1 03", 1100000003, 03);
+        Persona persona4=new Persona(20000004, "Pedro", "Kippes", "Calle1 04", 1100000004, 04);
+        Persona persona5=new Persona(20000005, "Pablo", "Amezaga", "Calle1 05", 1100000005, 05);
+        Persona persona6=new Persona(20000006, "Ana", "Campos", "Calle1 06", 1100000006, 06);
+        Persona persona7=new Persona(20000007, "Santiago", "Gines", "Calle1 07", 1100000007, 07);
+        Persona persona8=new Persona(20000008, "Misael", "Amezaga", "Calle1 08", 1100000008, 8);
+        Persona persona9=new Persona(20000009, "Julian", "Zor El", "Calle1 09", 1100000009, 9);
+        Persona persona10=new Persona(20000010, "Carolina", "Gonzales", "Calle1 10", 1100000010, 10);
+        Persona persona11=new Persona(20000011, "Daiana", "Tafran", "Calle1 11", 1100000011, 18);
+        Persona persona12=new Persona(20000012, "Cintia", "Butiler", "Calle1 12", 1100000012, 19);
+        Persona persona13=new Persona(20000013, "Marcos", "Gomez", "Calle1 13", 1100000013, 20);
+        Persona persona14=new Persona(20000014, "Federico", "Gonzalez", "Calle1 14", 1100000014, 21);
+        Persona persona15=new Persona(20000015, "Luis", "Perez", "Calle1 15", 1100000015, 22);
+        Persona persona16=new Persona(20000016, "Elio", "Tes", "Calle1 16", 1100000016, 23);
+        Persona persona17=new Persona(20000017, "Homero", "Simpson", "Calle1 17", 1100000017, 24);
+        Persona persona18=new Persona(20000018, "Sofia", "Campos", "Calle1 18", 1100000018, 25);
+        Persona persona19=new Persona(20000019, "Sergio", "Ramos", "Calle1 19", 1100000019, 26);
+        Persona persona20=new Persona(20000020, "Ester", "Cita", "Calle1 20", 1100000020, 27);
+        
+        //*creo y agrego las personas a la lista principal
+        List<Persona>ListaPersonas=new LinkedList<Persona>();
+        ListaPersonas.add(persona1);
+        ListaPersonas.add(persona2);
+        ListaPersonas.add(persona3);
+        ListaPersonas.add(persona4);
+        ListaPersonas.add(persona5);
+        ListaPersonas.add(persona6);
+        ListaPersonas.add(persona7);
+        ListaPersonas.add(persona8);
+        ListaPersonas.add(persona9);
+        ListaPersonas.add(persona10);
+        ListaPersonas.add(persona11);
+        ListaPersonas.add(persona12);
+        ListaPersonas.add(persona13);
+        ListaPersonas.add(persona14);
+        ListaPersonas.add(persona15);
+        ListaPersonas.add(persona16);
+        ListaPersonas.add(persona17);
+        ListaPersonas.add(persona18);
+        ListaPersonas.add(persona19);
+        ListaPersonas.add(persona20);
+        //creo sublistas para mayores y menores de edad con recorridos
+        List<Persona>ListaPersonasMenores=new LinkedList<Persona>();
+        List<Persona>ListaPersonasMayores=new LinkedList<Persona>();
+        for(Persona pers:ListaPersonas){
+            if(18<=pers.getEdad()){
+                ListaPersonasMayores.add(pers);
+            }
+            else{
+                ListaPersonasMenores.add(pers);
+            }
+        }
+        //*recorro las listas pidiendo nombre, apellido y edad
+        System.out.println("En lista ListaPersonasMayores");
+        for(Persona pers:ListaPersonasMayores){
+            System.out.println("Su nombre es: "+pers.getNombre()+" su apellido es "+pers.getApellido()+" su edad es "+pers.getEdad());
+        }
+        System.out.println("En lista ListaPersonasMenores");
+        for(Persona pers:ListaPersonasMenores){
+            System.out.println("Su nombre es: "+pers.getNombre()+" su apellido es "+pers.getApellido()+" su edad es "+pers.getEdad());
+        }
+                      
+    }
+}
+
